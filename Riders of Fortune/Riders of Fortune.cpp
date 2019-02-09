@@ -7,8 +7,17 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello World!\n"; 
+	const int MAP = 27;
+	int destination[MAP] = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 };
+
+	cout << "Welcome to Riders of Fotune\n" << endl;
+	cout << "You are a young horseman named Yarra who travels to the Dragon's Dungeoun" << endl;
+	cout << "where you will meet with an evil red colored Dragon that holds the Chalice of Knowledge, an artifact that will bring you everlasting wisdom" << endl;
+	cout << "You adventure begins, now go find the Chalice" << endl;
+	cout << "P" << MAP << "D";
+	return 0;
 }
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
