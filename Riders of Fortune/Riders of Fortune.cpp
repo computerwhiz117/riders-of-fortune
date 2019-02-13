@@ -41,7 +41,7 @@ int main()
 		cout << "P" << destination[MAP] << "D" << endl;
 		//int *pnumbers = &destination[0];
 
-
+		//The player makes their decision on how they want to proceed in the game
 		cout << "Make your choice: " << endl;
 		cout << "1. Travel to another space on the board" << endl;
 		cout << "2. Dismount and explore the current space" << endl;
@@ -66,6 +66,26 @@ int main()
 		{
 			cout << "You have defeated the Giant Bat" << endl;
 			cout << "Your XP ranked up +2" << endl;
+			cout << "Make your choice" << endl;
+			cout << "1. Travel to another space on the board" << endl;
+			cout << "2. Dismount and explore the current space" << endl;
+			cin >> i;
+
+			//if (i == 1)
+			//{
+				//cout << "There is nothing for you to do, so you reflect upon your adventures thus far. You take the time to train and enhance your reflexes" << endl;
+				//cout << "You XP increases by +1" << endl;
+				//cout << "Make your choice: ";
+				//cout << "1. Travel to another space on the board" << endl;
+				//cout << "2. Dismount and explore the current space" << endl;
+				//cin >> i;
+			
+			//}
+			//else
+			//{
+				// Need to finish off writing this code
+			//}
+
 		}
 		
 		else
@@ -150,21 +170,51 @@ int main()
 			}
 
 		}
+		
+		else
+		{
+			cout << "You got a flail";
+			cout << "Do you want to equip it?";
+			cout << "1. Yes";
+			cout << "2. No";
+			cin >> i;
+		}
+		
 
+		if (i == 1)
+		{
+			cout << "Your attack is ranked up to +3" << endl;
+		}
+		else
+		{
+			cout << "You discarded the flail" << endl;
+		}
+
+		cout << "Make your choice: ";
+		cout << "1. Travel to another space on the board" << endl;
+		cout << "2. Dismount and explore the current space" << endl;
+
+		if (i == 1)
+		{
+			int flail;
+			cout << "You encountered a Killer Centipede";
+			cout << "It's HP is 4, it's a strong monster";
+			cout << "You have a flail, select the number of attacks";
+			cin >> flail;
+		}
+
+		if (i >= 4)
+		{
+			cout << "You have defeated the Killer Centipede" << endl;
+			cout << "Your XP ranked up to +2" << endl;
+		}
+		else
+		{
+			cout << "The Killer Centipede took a bite out of you and you are dead" << endl;
+			cout << "GAME OVER";
+		}
 
 	}
 
 	return 0;
 }
-
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
