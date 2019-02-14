@@ -1,6 +1,7 @@
 // Riders of Fortune.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+//
 #include "pch.h"
 #include <iostream>
 using namespace std;
@@ -8,8 +9,9 @@ using namespace std;
 int main()
 {
 	int i;
-	//int XP;
-	//const int XP = 5;
+	int Yarra = 0;
+	int *XP;
+	int *attack;
 	const int MAP = 27;
 	int destination[MAP] = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 };
 
@@ -64,8 +66,12 @@ int main()
 
 		if (knife >= 3)
 		{
+			XP = &Yarra;
+
+			Yarra = Yarra + 2;
+
 			cout << "You have defeated the Giant Bat" << endl;
-			cout << "Your XP ranked up +2" << endl;
+			cout << "Your XP ranked up to +" << Yarra << endl;
 			cout << "Make your choice" << endl;
 			cout << "1. Travel to another space on the board" << endl;
 			cout << "2. Dismount and explore the current space" << endl;
