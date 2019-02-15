@@ -10,8 +10,14 @@ int main()
 {
 	int i;
 	int Yarra = 0;
+	int *weapon;
+	int battle;
 	int *XP;
-	int *attack;
+	int attack = 0;
+	int bat = 3;
+	int centipede = 4;
+	int spider = 5;
+	int *monster;
 	const int MAP = 27;
 	int destination[MAP] = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 };
 
@@ -26,7 +32,7 @@ int main()
 
 	if (i == 1) 
 	{
-		// The game starts with the beginning of the mission
+		// The game starts with the story to understand's the player's purpose in playing the game
 		cout << "You are a young horseman named Yarra who travels to the Dragon's Dungeoun" << endl;
 		cout << "where you will meet an evil red colored Dragon that holds the Chalice of Knowledge," << endl;
 		cout << "an artifact that will bring you everlasting wisdom." << endl;
@@ -36,9 +42,9 @@ int main()
 		cout << "You, Yarra must have the bravery and courage to defeat the monsters and defeat the evil dragon." << endl;
 
 
-		cout << "Now your adventure begins, now go find the Chalice" << endl;
+		cout << "Now your adventure begins, go find the Chalice" << endl;
 
-		//for (int i = 0; i < MAP; ++i)
+
 
 		cout << "P" << destination[MAP] << "D" << endl;
 		//int *pnumbers = &destination[0];
@@ -58,14 +64,18 @@ int main()
 
 	if (i == 1)
 	{
-		int knife;
-		cout << "You encountered a Giant Bat" << endl;
-		cout << "It's HP is 3, so it's a weak monster: " << endl;
-		cout << "You have a knife, select the number of attacks: " << endl;
-		cin >> knife;
 
-		if (knife >= 3)
+		monster = &bat;
+
+
+		cout << "You encounter a Giant Bat" << endl;
+		cout << "It's HP is " << bat << ", it's a weak monster: " << endl;
+		cout << "You have a knife, select the number of attacks: " << endl;
+		cin >> battle;
+
+		if (attack >= bat)
 		{
+
 			XP = &Yarra;
 
 			Yarra = Yarra + 2;
@@ -110,7 +120,11 @@ int main()
 		
 		if (i == 1)
 		{
-			cout << "Your attack is ranked up to +3" << endl;
+			weapon = &attack;
+
+			attack = attack + 3;
+
+			cout << "Your attack is ranked up to +" << attack << endl;
 		}
 
 		else
@@ -125,16 +139,23 @@ int main()
 
 		if (i == 1)
 		{
-			int crossbow;
-			cout << "You encountered a Giant Bat" << endl;
-			cout << "It's HP is 3, so it's a weak monster: " << endl;
-			cout << "You have a crossbow, select the number of attacks: " << endl;
-			cin >> crossbow;
+			monster = &bat;
 
-			if (crossbow >= 3)
+
+			cout << "You encounter a Giant Bat" << endl;
+			cout << "It's HP is " << bat << ", it's a weak monster"  << endl;
+			cout << "You have a crossbow, select the number of attacks: " << endl;
+			cin >> battle;
+
+			if (attack >= bat)
 			{
+
+				XP = &Yarra;
+
+				Yarra = Yarra + 2;
+
 				cout << "You have defeated the Giant Bat" << endl;
-				cout << "Your XP ranked up +2" << endl;
+				cout << "Your XP ranked up +" << Yarra << endl;
 			}
 
 			else
@@ -144,29 +165,30 @@ int main()
 			}
 		}
 
-		else 
-		{
-			cout << "There is nothing for you to do, so you reflect upon your adventures thus far. You take the time to train and enhance your reflexes" << endl;
-			cout << "You XP increases by +1" << endl;
-		}
+		
 
 		cout << "Make your choice: " << endl;
 		cout << "1. Travel to another space on the board" << endl;
 		cout << "2. Dismount and explore the current space" << endl;
 		cin >> i;
 
-		if (1 == 1)
+		if (i == 1)
 		{
-			int crossbow;
-			cout << "You encountered a Killer Centipede" << endl;
-			cout << "It's HP is 4, it's a strong monster" << endl;
-			cout << "You have a crossbow, select the number of attacks: " << endl;
-			cin >> crossbow;
 
-			if (crossbow >= 4)
+			monster = &centipede;
+			XP = &Yarra;
+
+			Yarra = Yarra + 2;
+
+			cout << "You encounter a Killer Centipede" << endl;
+			cout << "It's HP is " << centipede << ", it's a strong monster" << endl;
+			cout << "You have a crossbow, select the number of attacks: " << endl;
+			cin >> battle;
+
+			if (attack >= centipede)
 			{
 				cout << "You have defeated the Killer Centipede" << endl;
-				cout << "Your XP ranked up +2" << endl;
+				cout << "Your XP ranked up +" << Yarra << endl;
 			}
 
 			else
@@ -179,47 +201,134 @@ int main()
 		
 		else
 		{
-			cout << "You got a flail";
-			cout << "Do you want to equip it?";
-			cout << "1. Yes";
-			cout << "2. No";
+			cout << "You got a flail" << endl;
+			cout << "Do you want to equip it?" << endl;
+			cout << "1. Yes" << endl;
+			cout << "2. No" << endl;
 			cin >> i;
-		}
-		
 
-		if (i == 1)
-		{
-			cout << "Your attack is ranked up to +3" << endl;
-		}
-		else
-		{
-			cout << "You discarded the flail" << endl;
-		}
+			if (i == 1)
+			{
+				weapon = &attack;
+				attack = attack + 3;
 
-		cout << "Make your choice: ";
-		cout << "1. Travel to another space on the board" << endl;
-		cout << "2. Dismount and explore the current space" << endl;
+				cout << "Your attack is ranked up to +" << attack << endl;
+			}
+			else
+			{
+				cout << "You discarded the flail" << endl;
+			}
 
-		if (i == 1)
-		{
-			int flail;
-			cout << "You encountered a Killer Centipede";
-			cout << "It's HP is 4, it's a strong monster";
-			cout << "You have a flail, select the number of attacks";
-			cin >> flail;
-		}
+			cout << "Make your choice: " << endl;
+			cout << "1. Travel to another space on the board" << endl;
+			cout << "2. Dismount and explore the current space" << endl;
+			cin >> i;
 
-		if (i >= 4)
-		{
-			cout << "You have defeated the Killer Centipede" << endl;
-			cout << "Your XP ranked up to +2" << endl;
-		}
-		else
-		{
-			cout << "The Killer Centipede took a bite out of you and you are dead" << endl;
-			cout << "GAME OVER";
-		}
+			if (i == 1)
+			{
+				monster = &centipede;
+				XP = &Yarra;
+				Yarra = Yarra + 2;
 
+				cout << "You encounter a Killer Centipede" << endl;
+				cout << "It's HP is " << centipede << ", it's a strong monster" << endl;
+				cout << "You have a flail, select the number of attacks" << endl;
+				cin >> battle;
+
+				if (attack >= centipede)
+				{
+					cout << "You have defeated the Killer Centipede" << endl;
+					cout << "Your XP ranked up to +" << Yarra << endl;
+
+					cout << "Make your choice: " << endl;
+					cout << "1. Travel to another space on the board" << endl;
+					cout << "2. Dismount and explore the current space" << endl;
+					cin >> i;
+
+					if (i == 1)
+					{
+						monster = &spider;
+
+						XP = &Yarra;
+
+						cout << "You encounter a Black Spider" << endl;
+						cout << "It's HP is " << spider << ", It's a stronger monster" << endl;
+						cout << "You have a flail, select the number of attacks" << endl;
+						cin >> battle;
+
+						if (attack >= spider)
+						{
+							cout << "You have defeated the Black Spider" << endl;
+							cout << "Your XP ranked up to +" << Yarra << endl;
+						}
+
+						else
+						{
+							cout << "The Black Spider wrapped you under it's web and stabbed you with it's legs" << endl;
+							cout << "GAME OVER";
+						}
+					}
+
+					else
+					{
+						cout << "You got a Broad Sword" << endl;
+						cout << "Do you want to equip it?" << endl;
+						cout << "1. Yes" << endl;
+						cout << "2. No" << endl;
+						cin >> i;
+
+						if (i == 1)
+						{
+							weapon = &attack;
+							attack = attack + 3;
+
+							cout << "Your attack is ranked up to +" << attack << endl;
+
+
+							cout << "Make your choice: " << endl;
+							cout << "1. Travel to another space on the board" << endl;
+							cout << "2. Dismount and explore the current space" << endl;
+							cin >> i;
+
+							if (i == 1)
+							{
+								monster = &spider;
+								XP = &Yarra;
+
+								cout << "You encounter a Black Spider" << endl;
+								cout << "It's HP is " << spider << ", It's a stronger monster" << endl;
+								cout << "You have a Broad Sword, select the number of attacks" << endl;
+								cin >> battle;
+
+								if (attack >= spider)
+								{
+									cout << "You have defeated the Black Spider" << endl;
+									cout << "Your XP ranked up to +" << Yarra << endl;
+								}
+
+								else
+								{
+									cout << "The Black Spider wrapped you under it's web and stabbed you with it's legs" << endl;
+									cout << "GAME OVER";
+								}
+							}
+						}
+
+						else
+						{
+							cout << "You discarded the Broad Sword" << endl;
+						}
+					}
+
+				}
+				else
+				{
+					cout << "The Killer Centipede took a bite out of you and you are dead" << endl;
+					cout << "GAME OVER";
+				}
+			}
+
+		}
 	}
 
 	return 0;
