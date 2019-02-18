@@ -18,6 +18,7 @@ int main()
 	int centipede = 4;
 	int armorsaurus = 5;
 	int spider = 6;
+	int serpent = 7;
 	int *monster;
 	const int MAP = 27;
 	int destination[MAP] = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 };
@@ -211,7 +212,7 @@ int main()
 			if (i == 1)
 			{
 				weapon = &attack;
-				attack = attack + 3;
+				attack = attack + 4;
 
 				cout << "Your attack is ranked up to +" << attack << endl;
 			}
@@ -288,7 +289,7 @@ int main()
 						if (i == 1)
 						{
 							weapon = &attack;
-							attack = attack + 3;
+							attack = attack + 5;
 
 							cout << "Your attack is ranked up to +" << attack << endl;
 
@@ -360,7 +361,7 @@ int main()
 										if (i == 1)
 										{
 											weapon = &attack;
-											attack = attack + 3;
+											attack = attack + 6;
 
 											cout << "Your attack ranked up to +" << attack << endl;
 
@@ -392,6 +393,88 @@ int main()
 											{
 											cout << "You have defeated the Black Spider" << endl;
 											cout << "Your XP ranked up to +" << Yarra << endl;
+
+											cout << "Make your Choice: " << endl;
+											cout << "1. Travel to another space on the board" << endl;
+											cout << "2. Dismount and explore the current space" << endl;
+											cin >> i;
+
+											if (i == 1)
+											{
+												monster = &serpent;
+
+												XP = &Yarra;
+												Yarra = Yarra + 2;
+
+												cout << "You encounter a Black Serpent" << endl;
+												cout << "It's HP is " << serpent << ", it's the strongest monster" << endl;
+												cout << "You have the Dragon Slayer, select the nummber of attacks" << endl;
+												cin >> battle;
+
+												if (attack >= serpent)
+												{
+													cout << "You have defeated the Black Serpent" << endl;
+													cout << "Your XP ranked up to +" << Yarra << endl;
+
+													//cout << "Make your Choice: " << endl;
+													//cout << "1. Travel to another space on the board" << endl;
+													//cout << "2. Dismount and explore the current space" << endl;
+													//cin >> i;
+												}
+												else
+												{
+													cout << "The Black Serpent snagged you in to it's mouth and used it's fangs to penetrate venom into your body and you are dead" << endl;
+													cout << "GAME OVER";
+												}
+
+												
+											}
+											else
+												{
+													cout << "You got the Spell of The Gods" << endl;
+													cout << "Do you want to equip it?" << endl;
+													cout << "1. Yes" << endl;
+													cout << "2. No" << endl;
+													cin >> i;
+
+													if (i == 1)
+													{
+														weapon = &attack;
+														attack = attack + 7;
+
+														cout << "Your attack ranked up to +" << attack << endl;
+
+														cout << "Make your choice: " << endl;
+														cout << "1. Travel to another space on the board" << endl;
+														cout << "2. Dismount and explore the current space" << endl;
+														cin >> i;
+
+														if (i == 1)
+														{
+															monster = &serpent;
+
+															XP = &Yarra;
+															Yarra = Yarra + 2;
+
+															cout << "You encounter a Black Serpent" << endl;
+															cout << "It's HP is " << serpent << ", it's the strongest monster" << endl;
+															cout << "You have the Spell of the Gods, select the number of attacks" << endl;
+															cin >> battle;
+
+															if (attack >= serpent)
+															{
+																cout << "You have defeated the Black Serpent" << endl;
+																cout << "You XP ranked up to +" << Yarra << endl;
+															}
+															
+															else
+															{
+																cout << "The Black Serpent snagged you into it's mouth and penetrate venom into your body and you are dead";
+																cout << "GAME OVER";
+															}
+														}
+													}
+												}
 										}
 
 
