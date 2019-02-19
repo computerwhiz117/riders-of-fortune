@@ -34,7 +34,7 @@ int main()
 	cout << "2. Exit the game" << endl;
 	cin >> i;
 
-	if (i == 1) 
+	if (i == 1)
 	{
 		// The game starts with the story to understand's the player's purpose in playing the game
 		cout << "You are a young horseman named Yarra who travels to the Dragon's Dungeoun" << endl;
@@ -59,7 +59,7 @@ int main()
 		cout << "2. Dismount and explore the current space" << endl;
 		cin >> i;
 	}
-	
+
 	else
 	{
 		// Quits the game
@@ -99,7 +99,7 @@ int main()
 				//cout << "1. Travel to another space on the board" << endl;
 				//cout << "2. Dismount and explore the current space" << endl;
 				//cin >> i;
-			
+
 			//}
 			//else
 			//{
@@ -107,7 +107,7 @@ int main()
 			//}
 
 		}
-		
+
 		else
 		{
 			cout << "The Giant Bat stabbed you with it's claws and you are dead" << endl;
@@ -120,8 +120,8 @@ int main()
 		cout << "Do you want to equip it?" << endl;
 		cout << "1. Yes" << endl;
 		cout << "2. No" << endl;
-		cin >> i; 
-		
+		cin >> i;
+
 		if (i == 1)
 		{
 			weapon = &attack;
@@ -147,7 +147,7 @@ int main()
 
 
 			cout << "You encounter a Giant Bat" << endl;
-			cout << "It's HP is " << bat << ", it's a weak monster"  << endl;
+			cout << "It's HP is " << bat << ", it's a weak monster" << endl;
 			cout << "You have a crossbow, select the number of attacks: " << endl;
 			cin >> battle;
 
@@ -169,7 +169,7 @@ int main()
 			}
 		}
 
-		
+
 
 		cout << "Make your choice: " << endl;
 		cout << "1. Travel to another space on the board" << endl;
@@ -202,7 +202,7 @@ int main()
 			}
 
 		}
-		
+
 		else
 		{
 			cout << "You got a flail" << endl;
@@ -280,6 +280,7 @@ int main()
 						}
 
 					}
+
 					else
 					{
 						cout << "You got a Broad Sword" << endl;
@@ -295,105 +296,105 @@ int main()
 
 							cout << "Your attack is ranked up to +" << attack << endl;
 
+						}
+						else
+						{
 
-							cout << "Make your choice: " << endl;
-							cout << "1. Travel to another space on the board" << endl;
-							cout << "2. Dismount and explore the current space" << endl;
-							cin >> i;
-				}
-					else
-					{
+							cout << "You discarded the Broad Sword" << endl;
 
-						cout << "You discarded the Broad Sword" << endl;
-						
-					}
+						}
 
-							if (i == 1)
+						cout << "Make your choice: " << endl;
+						cout << "1. Travel to another space on the board" << endl;
+						cout << "2. Dismount and explore the current space" << endl;
+						cin >> i;
+
+						if (i == 1)
+						{
+							monster = &armorsaurus;
+
+							XP = &Yarra;
+							Yarra = Yarra + 2;
+
+							cout << "You encounter an Armorsaurus" << endl;
+							cout << "It's HP is " << armorsaurus << ", It's a strong monster" << endl;
+							cout << "You have a Broad Sword, select the number of attacks" << endl;
+							cin >> battle;
+
+							if (attack >= armorsaurus)
 							{
-								monster = &armorsaurus;
+								cout << "You have defeated the Armorsaurus" << endl;
+								cout << "Your XP ranked up to +" << Yarra << endl;
 
-								XP = &Yarra;
-								Yarra = Yarra + 2;
+								cout << "Make your choice: " << endl;
+								cout << "1. Travel to another space on the board" << endl;
+								cout << "2. Dismount and explore the current space" << endl;
+								cin >> i;
 
-								cout << "You encounter an Armorsaurus" << endl;
-								cout << "It's HP is " << armorsaurus << ", It's a strong monster" << endl;
-								cout << "You have a Broad Sword, select the number of attacks" << endl;
-								cin >> battle;
-
-								if (attack >= armorsaurus)
+								if (i == 1)
 								{
-									cout << "You have defeated the Armorsaurus" << endl;
-									cout << "Your XP ranked up to +" << Yarra << endl;
 
-									cout << "Make your choice: " << endl;
-									cout << "1. Travel to another space on the board" << endl;
-									cout << "2. Dismount and explore the current space" << endl;
-									cin >> i;
+									monster = &spider;
+									XP = &Yarra;
 
-									if (i == 1) 
+									cout << "You encounter a Black Spider" << endl;
+									cout << "It's HP is " << spider << ", It's a stronger monster" << endl;
+									cout << "You have a Broad Sword, select the number of attacks" << endl;
+									cin >> battle;
+
+									if (attack >= spider)
 									{
-										
-										monster = &spider;
-										XP = &Yarra;
+										cout << "You have defeated the Black Spider" << endl;
+										cout << "Your XP ranked up to +" << Yarra << endl;
+									}
 
-										cout << "You encounter a Black Spider" << endl;
-										cout << "It's HP is " << spider << ", It's a stronger monster" << endl;
-										cout << "You have a Broad Sword, select the number of attacks" << endl;
-										cin >> battle;
-
-								if (attack >= spider)
-								{
-									cout << "You have defeated the Black Spider" << endl;
-									cout << "Your XP ranked up to +" << Yarra << endl;
+									else
+									{
+										cout << "The Black Spider wrapped you under it's web and stabbed you with it's legs" << endl;
+										cout << "GAME OVER";
+									}
 								}
-
 								else
 								{
-									cout << "The Black Spider wrapped you under it's web and stabbed you with it's legs" << endl;
-									cout << "GAME OVER";
-								}
+									cout << "You got the Dragon Slayer" << endl;
+									cout << "Do you want to equip it?" << endl;
+									cout << "1. Yes" << endl;
+									cout << "2. No" << endl;
+									cin >> i;
+
+									if (i == 1)
+									{
+										weapon = &attack;
+										attack = attack + 6;
+
+										cout << "Your attack ranked up to +" << attack << endl;
+
+										cout << "Make your choice: " << endl;
+										cout << "1. Travel to another space on the board" << endl;
+										cout << "2. Dismount and explore the current space" << endl;
+										cin >> i;
+
 									}
 									else
 									{
-										cout << "You got the Dragon Slayer" << endl;
-										cout << "Do you want to equip it?" << endl;
-										cout << "1. Yes" << endl;
-										cout << "2. No" << endl;
-										cin >> i;
+										cout << "You discarded the Dragon Slayer" << endl;
+									}
 
-										if (i == 1)
+									if (i == 1)
+									{
+
+										monster = &spider;
+
+										XP = &Yarra;
+										Yarra = Yarra + 2;
+
+										cout << "You encounter a Black Spider" << endl;
+										cout << "It's HP is " << spider << ", It's a stronger monster" << endl;
+										cout << "You have the Dragon Slayer, select the number of attacks" << endl;
+										cin >> battle;
+
+										if (attack >= spider)
 										{
-											weapon = &attack;
-											attack = attack + 6;
-
-											cout << "Your attack ranked up to +" << attack << endl;
-
-											cout << "Make your choice: " << endl;
-											cout << "1. Travel to another space on the board" << endl;
-											cout << "2. Dismount and explore the current space" << endl;
-											cin >> i;
-											
-										}
-										else
-										{
-											cout << "You discarded the Dragon Slayer" << endl;
-										}
-
-										if (i == 1)
-										{
-
-											monster = &spider;
-
-											XP = &Yarra;
-											Yarra = Yarra + 2;
-
-											cout << "You encounter a Black Spider" << endl;
-											cout << "It's HP is " << spider << ", It's a stronger monster" << endl;
-											cout << "You have the Dragon Slayer, select the number of attacks" << endl;
-											cin >> battle;
-
-											if (attack >= spider)
-											{
 											cout << "You have defeated the Black Spider" << endl;
 											cout << "Your XP ranked up to +" << Yarra << endl;
 
@@ -430,185 +431,187 @@ int main()
 													cout << "GAME OVER";
 												}
 
-												
-											}
 											else
+											{
+												cout << "You got the Spell of The Gods" << endl;
+												cout << "Do you want to equip it?" << endl;
+												cout << "1. Yes" << endl;
+												cout << "2. No" << endl;
+												cin >> i;
+
+												if (i == 1)
 												{
-													cout << "You got the Spell of The Gods" << endl;
-													cout << "Do you want to equip it?" << endl;
-													cout << "1. Yes" << endl;
-													cout << "2. No" << endl;
+													weapon = &attack;
+													attack = attack + 7;
+
+													cout << "Your attack ranked up to +" << attack << endl;
+
+													cout << "Make your choice: " << endl;
+													cout << "1. Travel to another space on the board" << endl;
+													cout << "2. Dismount and explore the current space" << endl;
 													cin >> i;
 
 													if (i == 1)
 													{
-														weapon = &attack;
-														attack = attack + 7;
+														monster = &serpent;
 
-														cout << "Your attack ranked up to +" << attack << endl;
+														XP = &Yarra;
+														Yarra = Yarra + 2;
 
-														cout << "Make your choice: " << endl;
-														cout << "1. Travel to another space on the board" << endl;
-														cout << "2. Dismount and explore the current space" << endl;
-														cin >> i;
+														cout << "You encounter a Black Serpent" << endl;
+														cout << "It's HP is " << serpent << ", it's the strongest monster" << endl;
+														cout << "You have the Spell of the Gods, select the number of attacks" << endl;
+														cin >> battle;
 
-														if (i == 1)
+														if (attack >= serpent)
 														{
-															monster = &serpent;
+															cout << "You have defeated the Black Serpent" << endl;
+															cout << "You XP ranked up to +" << Yarra << endl;
 
-															XP = &Yarra;
-															Yarra = Yarra + 2;
+															cout << "Make your choice: " << endl;
+															cout << "1. Travel to another space to the board" << endl;
+															cout << "2. Dismount and explore the current space" << endl;
+															cin >> i;
 
-															cout << "You encounter a Black Serpent" << endl;
-															cout << "It's HP is " << serpent << ", it's the strongest monster" << endl;
-															cout << "You have the Spell of the Gods, select the number of attacks" << endl;
-															cin >> battle;
-
-															if (attack >= serpent)
+															if (i == 1)
 															{
-																cout << "You have defeated the Black Serpent" << endl;
-																cout << "You XP ranked up to +" << Yarra << endl;
+																boss = &dragon;
 
-																cout << "Make your choice: " << endl;
-																cout << "1. Travel to another space to the board" << endl;
-																cout << "2. Dismount and explore the current space" << endl;
-																cin >> i;
+																XP = &Yarra;
 
-																if (i == 1)
+																cout << "You enter into the lair of the Dragon where you try to find the Chalice of Knowledge" << endl;
+																cout << "But then you encounter the red Dragon!!!!!!!!!!!" << endl;
+																cout << "The Dragon is furious that you were able to survive in the Dungeoun" << endl;
+																cout << "especially killing all the monsters that he summoned" << endl;
+																cout << "He is currently guarding the Chalice of Knowledge with his own bare hands" << endl;
+																cout << "The Dragon will face you off into a fight til the death" << endl;
+																cout << "Yarra the hero takes out his Spell of the Gods and he's ready for the fight againt the evil and deadly red dragon" << endl;
+
+																cout << "Now it's your chance, fight the dragon and get the Chalice of Knowledge" << endl;
+																cin >> battle;
+
+																if (Yarra >= dragon)
 																{
-																	boss = &dragon;
-																	
-																	XP = &Yarra;
-
-																	cout << "You enter into the lair of the Dragon where you try to find the Chalice of Knowledge" << endl;
-																	cout << "But then you encounter the red Dragon!!!!!!!!!!!" << endl;
-																	cout << "The Dragon is furious that you were able to survive in the Dungeoun" << endl;
-																	cout <<	"especially killing all the monsters that he summoned" << endl;
-																	cout << "He is currently guarding the Chalice of Knowledge with his own bare hands" << endl;
-																	cout << "The Dragon will face you off into a fight til the death" << endl;
-																	cout << "Yarra the hero takes out his Spell of the Gods and he's ready for the fight againt the evil and deadly red dragon" << endl;
-
-																	cout << "Now it's your chance, fight the dragon and get the Chalice of Knowledge" << endl;
-																	cin >> battle;
-
-																	if (Yarra >= dragon)
-																	{
-																		cout << "Due to your cunning and experience, you have defeated the deadly dragon. Your quest has ended good sir." << endl;
-																		cout << "You've obtained the Chalice of Knowledge and all of Earth's mysteries are revealed" << endl;
-																		cout << "YOU WIN" << endl;
-																		cout << "THE END" << endl;
-																		cout << "Thanks for playing Riders of Fortune" << endl;
-																	}
-																	else
-																	{
-																		cout << "Alas, the Dragon's eyes stare at you and places you under his spell. You try to move but fail to do so and find yourself torched by the Dragon's fire." << endl;
-																		cout << "If only you had more experience, you could have seen it coming." << endl;
-																		cout << "GAME OVER" << endl;
-																		cout << "Try again next time" << endl;
-																	}
+																	cout << "Due to your cunning and experience, you have defeated the deadly dragon. Your quest has ended good sir." << endl;
+																	cout << "You've obtained the Chalice of Knowledge and all of Earth's mysteries are revealed" << endl;
+																	cout << "YOU WIN" << endl;
+																	cout << "THE END" << endl;
+																	cout << "Thanks for playing Riders of Fortune" << endl;
 																}
 																else
 																{
-																	XP = &Yarra;
-																	Yarra = Yarra + 1;
-
-																	cout << "There is nothing for you to do, so you reflect on your adventure thus far." << endl;
-																	cout << "You take the time to train and enhance your reflexes" << endl;
-																	cout << "Your XP ranked up to + " << Yarra << endl;
-																	
-																	cout << "Make your choice: " << endl;
-																	cout << "1. Travel to another space to the board" << endl;
-																	cout << "2. Dismount and explore the current space" << endl;
-																	cin >> i;
-
-																	if (i == 1)
-																	{
-																		boss = &dragon;
-
-																		XP = &Yarra;
-
-																		cout << "You enter into the lair of the Dragon where you try to find the Chalice of Knowledge" << endl;
-																		cout << "But then you encounter the red Dragon!!!!!!!!!!!" << endl;
-																		cout << "The Dragon is furious that you were able to survive in the Dungeoun" << endl;
-																		cout << "especially killing all the monsters that he summoned" << endl;
-																		cout << "He is currently guarding the Chalice of Knowledge with his own bare hands" << endl;
-																		cout << "The Dragon will face you off into a fight til the death" << endl;
-																		cout << "Yarra the hero takes out his Spell of the Gods and he's ready for the fight againt the evil and deadly red dragon" << endl;
-
-																		cout << "Now it's your chance, fight the dragon and get the Chalice of Knowledge" << endl;
-																		cin >> battle;
-
-																		if (Yarra >= dragon)
-																		{
-																			cout << "Due to your cunning and experience, you have defeated the deadly dragon. Your quest has ended good sir." << endl;
-																			cout << "You've obtained the Chalice of Knowledge and all of Earth's mysteries are revealed" << endl;
-																			cout << "YOU WIN" << endl;
-																			cout << "THE END" << endl;
-																			cout << "Thanks for playing Riders of Fortune" << endl;
-																		}
-																		else
-																		{
-																			cout << "Alas, the Dragon's eyes stare at you and places you under his spell. You try to move but fail to do so and find yourself torched by the Dragon's fire." << endl;
-																			cout << "If only you had more experience, you could have seen it coming." << endl;
-																			cout << "GAME OVER" << endl;
-																			cout << "Try again next time" << endl;
-																		}
+																	cout << "Alas, the Dragon's eyes stare at you and places you under his spell. You try to move but fail to do so and find yourself torched by the Dragon's fire." << endl;
+																	cout << "If only you had more experience, you could have seen it coming." << endl;
+																	cout << "GAME OVER" << endl;
+																	cout << "Try again next time" << endl;
 																}
-																	else
-																	{
-																		cout << "There is nothing for you to do, so you reflect on your adventure thus far." << endl;
-																		cout << "You take the time to train and enhance your reflexes" << endl;
-																		cout << "Your XP ranked up to + " << Yarra << endl;
-																	}
 															}
-															
 														}
-														
+														else
+														{
+															XP = &Yarra;
+															Yarra = Yarra + 1;
+
+															cout << "There is nothing for you to do, so you reflect on your adventure thus far." << endl;
+															cout << "You take the time to train and enhance your reflexes" << endl;
+															cout << "Your XP ranked up to + " << Yarra << endl;
+
+															cout << "Make your choice: " << endl;
+															cout << "1. Travel to another space to the board" << endl;
+															cout << "2. Dismount and explore the current space" << endl;
+															cin >> i;
+
+
+														}
+
+
+														if (i == 1)
+														{
+															boss = &dragon;
+
+															XP = &Yarra;
+
+															cout << "You enter into the lair of the Dragon where you try to find the Chalice of Knowledge" << endl;
+															cout << "But then you encounter the red Dragon!!!!!!!!!!!" << endl;
+															cout << "The Dragon is furious that you were able to survive in the Dungeoun" << endl;
+															cout << "especially killing all the monsters that he summoned" << endl;
+															cout << "He is currently guarding the Chalice of Knowledge with his own bare hands" << endl;
+															cout << "The Dragon will face you off into a fight til the death" << endl;
+															cout << "Yarra the hero takes out his Spell of the Gods and he's ready for the fight againt the evil and deadly red dragon" << endl;
+
+															cout << "Now it's your chance, fight the dragon and get the Chalice of Knowledge" << endl;
+															cin >> battle;
+
+															if (Yarra >= dragon)
+															{
+																cout << "Due to your cunning and experience, you have defeated the deadly dragon. Your quest has ended good sir." << endl;
+																cout << "You've obtained the Chalice of Knowledge and all of Earth's mysteries are revealed" << endl;
+																cout << "YOU WIN" << endl;
+																cout << "THE END" << endl;
+																cout << "Thanks for playing Riders of Fortune" << endl;
+															}
 															else
 															{
-																cout << "The Black Serpent snagged you into it's mouth and penetrate venom into your body and you are dead";
-																cout << "GAME OVER";
+																cout << "Alas, the Dragon's eyes stare at you and places you under his spell. You try to move but fail to do so and find yourself torched by the Dragon's fire." << endl;
+																cout << "If only you had more experience, you could have seen it coming." << endl;
+																cout << "GAME OVER" << endl;
+																cout << "Try again next time" << endl;
 															}
+														}
+														else
+														{
+															cout << "There is nothing for you to do, so you reflect on your adventure thus far." << endl;
+															cout << "You take the time to train and enhance your reflexes" << endl;
+															cout << "Your XP ranked up to + " << Yarra << endl;
+														}
 													}
 												}
-										}
+												else
+												{
+													cout << "The Black Serpent snagged you into it's mouth and penetrate venom into your body and you are dead";
+													cout << "GAME OVER";
+												}
 
 
-										}
+											}
 										else
 										{
+											cout << "You discarded the Spell of the Gods" << endl;
+										}
+
+											}
+
+										}
+									}
+									else
+									{
 										cout << "The Black Spider wrapped you under it's web and stabbed you with it's legs" << endl;
 										cout << "GAME OVER";
-										}
-								
+									}
+
+
 								}
 
-
-								
 							}
-
-							
-						}
-								else
-								{
+							else
+							{
 								cout << "The Armorsaurus stomped and crushed on you with it's legs and you are dead" << endl;
 								cout << "GAME OVER";
-								}
-						
+							}
+
+
+						}
+
+
 					}
-					
-				
+
 				}
-			}
-			
-			else
-			{
-				cout << "The Killer Centipede took a bite out of you and you are dead" << endl;
-				cout << "GAME OVER";
+
+
 			}
 
+				
 		}
 	}
 
 	return 0;
-}
