@@ -49,9 +49,9 @@ int main()
 		cout << "Now your adventure begins, go find the Chalice" << endl;
 
 
-
-		cout << "P" << destination[MAP] << "D" << endl;
-		//int *pnumbers = &destination[0];
+		for (int i = 0; i < 27;i++) {
+			cout << "P" << destination[i] << "D" << endl;
+		}
 
 		//The player makes their decision on how they want to proceed in the game
 		cout << "Make your choice: " << endl;
