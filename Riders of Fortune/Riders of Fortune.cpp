@@ -430,7 +430,7 @@ int main()
 													cout << "The Black Serpent snagged you in to it's mouth and used it's fangs to penetrate venom into your body and you are dead" << endl;
 													cout << "GAME OVER";
 												}
-
+											}
 											else
 											{
 												cout << "You got the Spell of The Gods" << endl;
@@ -574,6 +574,7 @@ int main()
 
 
 											}
+										}
 										else
 										{
 											cout << "You discarded the Spell of the Gods" << endl;
@@ -592,12 +593,7 @@ int main()
 
 								}
 
-							}
-							else
-							{
-								cout << "The Armorsaurus stomped and crushed on you with it's legs and you are dead" << endl;
-								cout << "GAME OVER";
-							}
+						}
 
 
 						}
@@ -610,8 +606,5 @@ int main()
 
 			}
 
-				
+			return 0;
 		}
-	}
-
-	return 0;
