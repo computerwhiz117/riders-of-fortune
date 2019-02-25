@@ -91,20 +91,6 @@ int main()
 			cout << "2. Dismount and explore the current space" << endl;
 			cin >> i;
 
-			//if (i == 1)
-			//{
-				//cout << "There is nothing for you to do, so you reflect upon your adventures thus far. You take the time to train and enhance your reflexes" << endl;
-				//cout << "You XP increases by +1" << endl;
-				//cout << "Make your choice: ";
-				//cout << "1. Travel to another space on the board" << endl;
-				//cout << "2. Dismount and explore the current space" << endl;
-				//cin >> i;
-
-			//}
-			//else
-			//{
-				// Need to finish off writing this code
-			//}
 
 		}
 
