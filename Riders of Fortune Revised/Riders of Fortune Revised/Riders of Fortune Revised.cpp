@@ -51,10 +51,11 @@ void Player::playerMove(int numSpacesToMove)
 	weaponModifier = 0;
 }
 
-void Player::playerMove(int numSpacesToMove) 
-{
-	currentPosOnBoard += numSpacesToMove;
-	if (currentPosOnBoard == NUM_OF_TILES - 1) { currentPosOnBoard++; }
+//void Player::playerMove(int numSpacesToMove) 
+//{
+	//currentPosOnBoard += numSpacesToMove;
+	//if (currentPosOnBoard == NUM_OF_TILES - 1) { currentPosOnBoard++; }
+//
 }
 
 void Player::setWepValue(int newWeaponModifier) 
@@ -204,11 +205,11 @@ bool mainAct(Player &Yarra, Monster &Monster)
 		else
 		{
 			int playerPos = Yarra.getCurrPlayerSquare();
-			for (int i = 0l i < numWeapons; i++) 
+			for (int i = 0; i < numWeapons; i++) 
 			{
 				if (entPosOnMap[playerPos] == weapons[i])
 				{
-					cout << "\n\nYou found a " << fullWeapons[i]{
+					cout << "\n\nYou found a " << fullWeapons[i];
 						Yarra.setWepValue(i + 3);
 					entPosOnMap[stuffInTheLocation = 'U'];
 					break;
@@ -218,7 +219,6 @@ bool mainAct(Player &Yarra, Monster &Monster)
 		}
 	}
 
-}
 
 //The start of the game
 
