@@ -56,7 +56,7 @@ void Player::playerMove(int numSpacesToMove)
 	//currentPosOnBoard += numSpacesToMove;
 	//if (currentPosOnBoard == NUM_OF_TILES - 1) { currentPosOnBoard++; }
 //
-}
+//}
 
 void Player::setWepValue(int newWeaponModifier) 
 {
